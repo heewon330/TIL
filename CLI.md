@@ -137,3 +137,8 @@ $ git restore --staged <file>... # 스테이지에서 내리고 싶다면 사용
  $ git push -u origin master  # 수동으로 깃허브에 보내주기
 
  clone 내용 추가
+
+ 원격 저장소의 내용 받아오기
+ ```sh
+ $ git pull origin master
+ ```
