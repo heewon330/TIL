@@ -132,7 +132,6 @@ $ git restore --staged <file>... # 스테이지에서 내리고 싶다면 사용
 
 
 
+ $ git remote add origin [주소] # 깃허브와 연결
 
-
-
-
+ $ git push -u origin master  # 수동으로 깃허브에 보내주기
