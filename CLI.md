@@ -142,3 +142,121 @@ $ git restore --staged <file>... # 스테이지에서 내리고 싶다면 사용
  ```sh
  $ git pull origin master
  ```
+
+ # Git 사용법2
+
+```
+$ git remote add origin <URL>
+```
+
+- 딕셔너리로 생각해보면, origin(원격저장소 이름)이 키, url이 벨류
+
+- url에다가 오리진으로 저장해놓는 것 (사진을 다른 클라우드에 저장하는 개념)
+
+
+
+```
+$ git remote -h  # remote 도움말
+
+$ git remote remove <name>    # 이 때 네임은 키값(오리진 등)
+
+$ git push origin master  #오리진이 등록된 곳이 마스터가 됨
+
+$ git log --oneline  # commit 상태를 요약적으로 보여줌(그냥 log가 더 상세)
+```
+
+- 커밋에 들어갔는지 항상 확인해야함!
+
+
+
+![image-20211203094455718](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211203094455718.png)
+
+- 내 깃허브(원격저장소)에는 밑(빨간 글씨)에만 업로드 되어 있단 뜻!
+
+  
+
+모든걸 원격 저장소에 올리기 위해선??
+
+```
+$ git push origin master
+```
+
+
+
+![image-20211203094831681](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211203094831681.png)
+
+- 내 컴퓨터와 원격저장소가 동일하다라는 뜻!
+
+
+
+- 비어있는 폴더는 굳이 git이 관리를 하지 않음
+
+- 홈폴더에는 절대 마스터키 있음 안됨~~~
+
+  
+
+| 위치 표시 | 설명      |
+| --------- | --------- |
+| .         | 내 위치   |
+| ..        | 상위 위치 |
+
+
+
+
+
+## 프로젝트 초기화 진행
+
+### README.md 와 .gitignore 파일 생성
+
+![image-20211203103135840](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211203103135840.png)
+
+
+
+### git secret 파일 설정
+
+![image-20211203104246990](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211203104246990.png)
+
+- .gitignore에 파일명 작성 시 무시됨.
+- .gitignore파일은 필수로 만들어야 함.
+
+ctrl+a :전체선택
+
+![image-20211203104834935](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211203104834935.png)
+
+- .gitignore 파일에 추가하면 필요 없는 파일들 무시됨
+
+
+
+### 원격 저장소에 추가
+
+![image-20211203105314167](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211203105314167.png)
+
+- 프로젝트 초기화
+
+  
+
+1. remote 저장소 생성 @github.com
+
+2. 생성한 원격 저장소 등록
+
+```
+$ git remote add origin <URL>
+```
+
+3. 등록된 저장소 다시 확인
+
+```
+$ git remote -v
+```
+
+4. 지금까지의 commit push
+
+```
+$ git push origin master
+```
+
+
+
+## 만약 다른 컴퓨터에서 진행하려면?
+
+![image-20211203131439525](git-notetaking.assets/image-20211203131439525.png)
